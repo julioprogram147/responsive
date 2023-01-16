@@ -1,0 +1,285 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Roboto:ital,wght@0,500;0,900;1,300&display=swap');
+
+
+
+html{
+
+
+
+    font-size: 62.5%;
+
+    box-sizing: border-box;
+}
+
+*,*::before, *::after{
+
+
+box-sizing: inherit;
+
+
+}
+
+body{
+
+padding: 0;
+
+margin: 0;
+
+line-height: 1.6;
+
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+background:url("../img/pexels-danny-meneses-943096.jpg") no-repeat center fixed;
+
+background-size: cover;
+
+
+
+}
+
+.logo{
+
+
+    width: 70px;
+
+    height: 70px;
+
+    position: relative;
+
+    right: 70px;
+
+    
+}
+
+nav{
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    min-height: 8vh;
+
+    background-color: rgba(0, 0, 0, 0.637);
+
+    
+}
+
+.ham{
+
+    display: none;
+cursor: pointer;
+
+border: none;
+
+margin: 0;
+
+padding: 0;
+
+background-color: transparent;
+
+}
+
+.ham span{
+
+
+    display: block;
+
+    background-color: white;
+
+    height: 3px;
+
+    width:28px;
+
+    margin: 10px auto;
+
+    border-radius: 10px;
+}
+
+.enlace-menu{
+
+
+    display: flex;
+
+    padding: 0;
+}
+
+.enlace-menu li{
+
+
+    padding: 0 40px;
+
+    list-style-type: none;
+
+    transition: 0.3s;
+}
+
+.enlace-menu li a{
+
+
+text-decoration: none;
+
+
+font-size: 1.8rem;
+
+color: white;
+
+font-weight: 600px;
+
+}
+
+.enlace-menu li:hover{
+
+
+background-color: black;
+
+}
+
+/*  dispositivos moviles  */
+
+@media(max-width:760px){
+
+
+    body{   
+
+overflow: hidden;
+
+
+    }
+
+    .logo{
+
+
+        padding-left: 25px;
+    }
+
+    .ham{
+
+display: block;
+
+position: absolute;
+
+top: 15px;
+
+right: 25px;
+
+transition: 0.2s 0.1s;
+    }
+
+
+    .ham:hover{
+
+
+        transform: rotate(360deg);
+    }
+
+    nav{
+flex-direction: column;
+
+align-items: flex-start;
+
+padding-top: 25px;
+
+padding-bottom: 25px;
+
+
+    }
+
+    .enlace-menu{
+
+
+        flex-direction: column;
+
+        justify-content: space-around;
+
+        align-items: center;
+
+        height: 92vh;
+
+        margin: 0;
+
+        padding: 0;
+
+        width: 100%;
+
+        display:none;
+
+        opacity: 0;
+    }
+
+    .enlace-menu li{
+
+
+        width: 100%;
+
+        text-align: center;
+
+        padding: 20px;
+    }
+
+    .programador{
+
+        display: inline;
+
+        margin: auto;
+
+        margin-bottom: 50px;
+
+        font-size: 2rem;
+
+
+
+    }
+}
+
+@keyframes muestramenu{
+
+
+
+    from{opacity: 0;}
+
+    to{opacity: 1;}
+}
+
+.enlace-menu.activado{
+
+
+
+    display: flex;
+
+    animation: muestramenu 350ms ease-in-out both;
+}
+
+.br-1.animado{
+
+    transform: rotate(-45deg) translate(-10px, 8px) ;
+
+}
+
+.br-2.animado{
+
+    opacity: 0;
+
+}
+
+.br-3.animado{
+
+    transform:rotate(45deg) translate(-10px, -8px) ;
+
+}
+
+.programador{
+
+    display: inline;
+
+    
+font-family: 'Permanent Marker', cursive;
+
+
+    color: white;
+
+}
